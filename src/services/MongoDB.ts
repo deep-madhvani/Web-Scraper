@@ -39,6 +39,7 @@ class MongoDB {
   async find<T extends Document>(query: Partial<T>, options?: FindOptions): Promise<T | undefined> {
     try {
       const result = await this.collection?.findOne<T>(query, options);
+      console.log("result= ",result)
       if(!result)
       {
         logger.err({ message: "Failed to find Query", condition: query }, true);
