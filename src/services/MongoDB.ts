@@ -32,7 +32,7 @@ class MongoDB {
 
   initDb() {
     this.db = this.client.db('bright-data');
-    this.collection = this.db.collection('user');
+    this.collection = this.db.collection('queries');
     logger.info({ message: "MongoDB Database and Collection initialized" }, true);
   }
 
